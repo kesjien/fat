@@ -123,6 +123,7 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
   - tests
   - simple ux/ui
   - type checking
+  - documentation
 
 ## Scripts
 
