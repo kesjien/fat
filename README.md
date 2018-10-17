@@ -114,7 +114,15 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
   - store - state store
   - styles - global styles, for some global rules such as font-family etc.
 
-
+## Implemented features
+  - pagination
+  - http calls
+  - modules
+  - navigation
+  - store management
+  - tests
+  - simple ux/ui
+  - type checking
 
 ## Scripts
 
