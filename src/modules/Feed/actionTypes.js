@@ -1,0 +1,1 @@
+export const GET_TRANSACTION_DATA = 'GET_DATA'

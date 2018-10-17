@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="mui-row sc-bdVaJa bPYCzj"
+/>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="mui-panel "
+>
+  <div
+    className="sc-bxivhb iuYwsc"
+  >
+    <div
+      className="sc-EHOje jRFSxW"
+    >
+      <div
+        className="mui-row sc-bdVaJa bPYCzj"
+      />
+    </div>
+  </div>
+</div>
+`;
