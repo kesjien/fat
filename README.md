@@ -1,22 +1,22 @@
 This project was done with a focus on the demonstration of the overall understanding of the concepts.
 
-Of course, it could be enhanced a lot but due to the lack of the time, I will write down points that could be and should be enhanced if it is a real-world project.
+Of course, it could be enhanced a lot but due to the lack of the time, I will write down points that could be and should be enhanced if it if it was a real project.
 
  ## Architecure approach
   
   I am using modules in the project. Module is an architectural unit, think as a microservice.
 
-  Each module depends only on each own state, one module is an independent service and does not relate to another. Transitions between modules are possible with the Link component from the react-router package.
-  Whenever you transitioned to other modules you can parse URL and initialize data with data coming from the backend.
+  Each module depends only on own state, one module is an independent service and does not have the influence to other modules. Transitions between modules are possible with the Link component from the react-router package.
+  Whenever you transitioned to other modules you can parse URL and initialize state with data coming from the backend.
 
-  In a real world, the best approach to communicate between two modules on the one level is to use 'EVENT DRIVEN' approach. To use middleware which gives you a possibility to create channels and publish/subscribe to the events in those channels, it could be implemented with the rx.js library.
+  **In a real world, the best approach to communicate between two modules on one level is to use 'EVENT DRIVEN' approach. To use middleware which gives you a possibility to create channels and publish/subscribe to the events in those channels, it could be implemented with the rx.js library.**
 
   e.g. modulesA -> moduleB:get-data:success subscribe
-  whenever the data will be fulfilled in the channel of the moduleB, moduleA will be notified
+  whenever the data will be received in the channel of the moduleB, moduleA will be notified
 
-  After implementation of this approach, it would be possible to DIVIDE a team and implement different services inside an application without conflicts and collisions.
+  **After implementation of this approach, it would be possible to DIVIDE a team and implement different services inside an application without conflicts and collisions.**
 
-  For this current implementation, I've implemented the simplest approach.
+  For this current implementation, I've implemented the simpliest approach.
 
 
 ## UX/UI
