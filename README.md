@@ -3,25 +3,27 @@ This project was done with a focus on the demonstration of the overall understan
 Of course, it could be enhanced a lot but due to the lack of the time, I will write down points that could be and should be enhanced if it is a real-world project.
 
  ## Architecure approach
+  
   I am using modules in the project. Module is an architectural unit, think as a microservice.
-  Each module depends only on each own state, one module is an independent service and does not relate on another. Transition between modules are possible with the Link component from the react-router package.
-  Whenever you transitioned to another modules you can parse url and initialise data with data coming from backend.
 
-  In a real world the best approach to communicate between two modules on the one level is to use 'EVENT DRIVEN' approach. To use middleware which gives you a possibility to create channels and publish/subscribe to the events in those channels, it could be implemented with rx.js library.
+  Each module depends only on each own state, one module is an independent service and does not relate to another. Transitions between modules are possible with the Link component from the react-router package.
+  Whenever you transitioned to other modules you can parse URL and initialize data with data coming from the backend.
+
+  In a real world, the best approach to communicate between two modules on the one level is to use 'EVENT DRIVEN' approach. To use middleware which gives you a possibility to create channels and publish/subscribe to the events in those channels, it could be implemented with the rx.js library.
 
   e.g. modulesA -> moduleB:get-data:success subscribe
   whenever the data will be fulfilled in the channel of the moduleB, moduleA will be notified
 
+  After implementation of this approach, it would be possible to DIVIDE a team and implement different services inside an application without conflicts and collisions.
 
-  After implementation of this approach it would be possible to DIVIDE a team and implement differents services inside an application without conflicts and collisions.
-
-  For this current implementation i've implemented the most simpliest approach.
+  For this current implementation, I've implemented the simplest approach.
 
 
 ## UX/UI
-  Currently was implemented the most simple bootstrap UX/UI (it could be and should be significantly improved)
-  Implementation of the good UX/UI is a ber scurpulous thing.
-  - prerequisites ( product owner vision, trends, brand colours and themes, feedbacks )
+  Currently, the most simple bootstrapped UX/UI was implemented (it could be and should be significantly improved)
+  Implementation of the good UX/UI is a very scrupulous task.
+
+  - prerequisites, requirements ( product owner vision, trends, brand colours and themes, feedbacks )
   - user feedback ( to know the pros and cons of the current implementation )
   - user stories ( to understand what features and interactions to implement and how )
   - prototype ( mvp version of the product, clickable wireframe )
@@ -95,7 +97,7 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
 
 ## Structure definition
 
-  - Modules  - Architectural Unit, think about it as a microservice. Module is a unit that depends only on each own state and props (no props from the another modules). It has own reducer, actions, actionTypes, service (for http calls), components. Two modules can not depend on each other. This flow gives us a possibility to work in a MICROSERVICE way. To develop separate parts of the project and keep it safe.
+  - Modules  - Architectural Unit, think about it as a microservice. Module is a unit that depends only on each own state and props (no props propagated from another modules). It has own reducer, actions, actionTypes, service (for http calls), components. Two modules can not depend on each other. This flow gives us a possibility to work in a MICROSERVICE way. To develop separate parts of the project and keep it safe and decoupled.
 
   - __snapshots__ - test snapshot of the components to test react components, jest implementation
   - actions - module actions, such as async calls etc
@@ -128,7 +130,7 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
   - redux - state management
   - redux-thunk - react middleware to work with the async calls
   - styled-components - react component sylings, easy of use, modularity, state of the art features, perfomance, painless maintenance, prefixing
-  - react-fontawesome - for icons, backbutton
+  - react-fontawesome - for icons, backbutton icon
 
 ## To run the project
 
