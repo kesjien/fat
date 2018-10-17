@@ -2,7 +2,7 @@ This project was done with a focus on the demonstration of the overall understan
 
 Of course, it could be enhanced a lot but due to the lack of the time, I will write down points that could be and should be enhanced if it is a real-world project.
 
- ###Architecure approach###
+ ## Architecure approach
   I am using modules in the project. Module is an architectural unit, think as a microservice.
   Each module depends only on each own state, one module is an independent service and does not relate on another. Transition between modules are possible with the Link component from the react-router package.
   Whenever you transitioned to another modules you can parse url and initialise data with data coming from backend.
@@ -18,7 +18,7 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
   For this current implementation i've implemented the most simpliest approach.
 
 
-- UX/UI
+## UX/UI
   Currently was implemented the most simple bootstrap UX/UI (it could be and should be significantly improved)
   Implementation of the good UX/UI is a ber scurpulous thing.
   - prerequisites ( product owner vision, trends, brand colours and themes, feedbacks )
@@ -30,7 +30,7 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
   That's why i left it simple and without a lot of the good things.
 
 
-- Future enhancements
+## Future enhancements
 
   If i have more time on it and have more prerequisites/requirements.
 
@@ -48,14 +48,9 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
   - editable grid if needed
 
 
-
-
-
-
-
-
 ## Folder Structure
 
+```
 ├── src
 │   ├── index.js
 │   ├── modules
@@ -96,6 +91,7 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
 │   │   └── http.js
 │   ├── store.js
 │   └── styles.js
+```
 
 ## Structure definition
 
