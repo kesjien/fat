@@ -34,20 +34,22 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
 
 ## Future enhancements
 
-  If i have more time on it and have more prerequisites/requirements.
-
+  If i have more prerequisites/requirements and time.
+ 
   - re-think ux/ui
-  - stop displaying ID's since it is a bad practice to use ID's to the user (except this dashboard will use admins or tech team)
+  - stop displaying ID's since it is a bad practice to display ID's to the user (except this dashboard will be used by admins or tech team)
   - implement all the api endpoints (CRUD)
-  - validate the incoming data
+  - validate incoming data
   - validate input data
-  - better handling of errors from the server
-  - more tests
-  - filter incoming data by data types and write filters for every type of the incoming data coming from the backend (status, dateFrom, dateTo ...)
-  - display the data in apropriate manner (calendat for date, etc), selectbox for statuses, etc.....
-  - styling for mobile version if needed
+  - better error handling of the http calls
+  - more component tests
+  - more manual tests 
+  - filter incoming data by data types and write filters for every type of the incoming data (status, dateFrom, dateTo ...)
+  - display the data in an apropriate way (calendar for date, etc), selectbox for statuses, etc.....
+  - styles for mobile version if needed
   - naming of the table header values
   - editable grid if needed
+  - smoother transitions
 
 
 ## Folder Structure
@@ -97,19 +99,19 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
 
 ## Structure definition
 
-  - Modules  - Architectural Unit, think about it as a microservice. Module is a unit that depends only on each own state and props (no props propagated from another modules). It has own reducer, actions, actionTypes, service (for http calls), components. Two modules can not depend on each other. This flow gives us a possibility to work in a MICROSERVICE way. To develop separate parts of the project and keep it safe and decoupled.
+  - Modules  - architectural Unit, think about it as a microservice. Module is a unit that depends only on each own state and props (no props propagated from another modules). It has own reducer, actions, actionTypes, service (for http calls), components. Two modules can not depend on each other. This flow gives us a possibility to work in a MICROSERVICE way. To develop separate parts of the project and keep it safe and decoupled.
 
-  - __snapshots__ - test snapshot of the components to test react components, jest implementation
+  - __snapshots__ - test snapshot of the component to test react components, jest implementation
   - actions - module actions, such as async calls etc
   - actionTypes - constants
   - componenets - module react components 
-  - reducers - reducers which is combined in index.js for a state management
-  - service - separated set of the http calls which is implemented via http service (wrapper above the axios)
-  - .test.js - tests of the modulem for now only implemented couple of them
+  - reducers - reducers which is combined in ../index.js for a state management
+  - service - separated set of the http calls which is implemented via http service ../services/http.js (wrapper above the axios)
+  - .test.js - components tests, for now only couple of them
   - service-mapper - mappers of the incoming data from the async call, here we can iterate through the response and return only needed collection or validate e.g. http.get(`/transaction/${number}`).then(dataFeed => mappers.feedMapper.mapFeedData(dataFeed.data))
 
-  - services - commonly used services across modules, http wrapper with put, delete, post, get methods and error handling
-  - store - store of the state management
+  - services - shared services across modules, http wrapper with put, delete, post, get methods and error handling
+  - store - state store
   - styles - global styles, for some global rules such as font-family etc.
 
 
@@ -124,11 +126,11 @@ Of course, it could be enhanced a lot but due to the lack of the time, I will wr
 
   - axios - async http calls
   - eslint - linting tools to avoid silly mistakes and to keep the code clean and homogeneous  
-  - eslint-config-airbnb - airbnb coding styles because i find it the most appropriate set of rules
-  - muicss - for layout boostraping (Container, Panel, Col, Row), responsive layaout, fast development
+  - eslint-config-airbnb - airbnb coding styles to keep the code clean and homogeneous
+  - muicss - for layout boostraping (Container, Panel, Col, Row), responsive layout, fast development
   - prop-types - type checking
   - redux - state management
-  - redux-thunk - react middleware to work with the async calls
+  - redux-thunk - react middleware to work with async calls
   - styled-components - react component sylings, easy of use, modularity, state of the art features, perfomance, painless maintenance, prefixing
   - react-fontawesome - for icons, backbutton icon
 
