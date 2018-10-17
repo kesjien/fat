@@ -2,7 +2,7 @@ This project was done with a focus on the demonstration of the overall understan
 
 Of course, it could be enhanced a lot but due to the lack of the time, I will write down points that could be and should be enhanced if it is a real-world project.
 
- - Architecure approach
+ ##Architecure approach##
   I am using modules in the project. Module is an architectural unit, think as a microservice.
   Each module depends only on each own state, one module is an independent service and does not relate on another. Transition between modules are possible with the Link component from the react-router package.
   Whenever you transitioned to another modules you can parse url and initialise data with data coming from backend.
